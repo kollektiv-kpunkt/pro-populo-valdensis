@@ -1,0 +1,9 @@
+/dist/*
+/node_modules
+/localhost.pem
+/localhost-key.pem
+/vendor
+/lib/acf/*
+!/lib/acf/acf-json
+composer.lock
+.env

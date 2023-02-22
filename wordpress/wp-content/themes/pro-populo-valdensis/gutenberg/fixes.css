@@ -1,0 +1,47 @@
+img.h-full {
+    height: 100%;
+}
+
+.components-input-control,
+.components-select-control {
+    height: unset !important;
+}
+
+.wp-block-quote {
+    border: 0 !important;
+    padding-left: 0;
+}
+
+.wp-block-quote cite {
+    position: absolute;
+}
+
+html :where(.editor-styles-wrapper) h1 {
+    font-size: 3.5rem;
+}
+
+html :where(.editor-styles-wrapper) h2 {
+    font-size: 2.75rem;
+}
+
+html :where(.editor-styles-wrapper) h3 {
+    font-size: 2.25rem;
+}
+
+html :where(.editor-styles-wrapper) h4 {
+    font-size: 2rem;
+}
+
+html :where(.editor-styles-wrapper) h5 {
+    font-size: 1.8rem;
+}
+
+html :where(.editor-styles-wrapper) h6 {
+    font-size: 1.7rem;
+}
+
+.ppv-link-toggle-content p {
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1 !important;
+}

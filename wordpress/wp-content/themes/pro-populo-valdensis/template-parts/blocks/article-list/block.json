@@ -1,0 +1,22 @@
+{
+    "name": "ppv/article-list",
+    "title": "Article List",
+    "description": "List of current articles with filter options",
+    "category": "layout",
+    "icon": "dashicons-list-view",
+    "keywords": [
+        "article",
+        "list",
+        "filter",
+        "search",
+        "ppv"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "layout.php",
+        "postTypes": [
+            "page"
+        ]
+    },
+    "align": "full"
+}

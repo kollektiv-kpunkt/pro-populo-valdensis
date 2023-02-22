@@ -1,0 +1,20 @@
+{
+    "name": "ppv/frontpage-heroine",
+    "title": "Frontpage Heroine",
+    "description": "Heroine section for the frontpage",
+    "category": "layout",
+    "icon": "dashicons-superhero",
+    "keywords": [
+        "heroine",
+        "frontpage",
+        "ppv"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "layout.php",
+        "postTypes": [
+            "page"
+        ]
+    },
+    "align": "full"
+}

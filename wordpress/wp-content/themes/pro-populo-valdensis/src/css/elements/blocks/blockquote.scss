@@ -1,0 +1,59 @@
+*.has-background blockquote {
+    --border-color: white;
+}
+
+blockquote {
+    align-self: center;
+    margin-top: 1.5rem !important;
+    margin-bottom: 4rem !important;
+    --padding: 1.25rem;
+    position: relative;
+    --border-color: var(--ppv-red);
+
+    p {
+        position: relative;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 2rem;
+        margin: 0;
+        border-top: 2px solid var(--border-color);
+        border-right: 2px solid var(--border-color);
+        border-left: 2px solid var(--border-color);
+
+        padding: var(--padding);
+
+        &::after {
+            content: "";
+            background-color: inherit;
+            position: absolute;
+            border: 2px solid var(--border-color);
+            border-radius: 0 3rem 0 0;
+            width: 4rem;
+            height: 4rem;
+            bottom: calc(-4rem + 2px);
+            left: 0.5rem;
+            border-bottom: none;
+            border-left: none;
+            z-index: 3;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border-bottom: 2px solid;
+            border-image: linear-gradient(to right, var(--border-color) 0, var(--border-color) 0.6rem, transparent 0.5rem, transparent 4.75rem, var(--border-color) 4.75rem, var(--border-color)) 1;
+        }
+    }
+
+    cite {
+        position: absolute;
+        font-style: normal;
+        bottom: -3.5rem;
+        left: 8rem;
+        font-size: 0.8125em;
+    }
+}

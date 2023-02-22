@@ -1,0 +1,78 @@
+.ppv-heroine-wrapper {
+    --slider-bottom-padding: 20vh;
+
+    .ppv-heroine-blog-slider-outer {
+        padding-bottom: var(--slider-bottom-padding);
+
+        .ppv-blog-slide {
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            display: block;
+            transition: 0.5s ease opacity, 0.5s ease visibility;
+
+            &.active {
+                visibility: visible;
+                opacity: 1;
+                height: auto;
+            }
+        }
+
+        .ppv-heroine-blog-slider-pagination {
+
+            &-item {
+                height: 0.2rem;
+                width: 2rem;
+                max-width: 15%;
+                background-color: white;
+                opacity: 0.75;
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .ppv-heroine-card-grid {
+        margin-top: calc((var(--slider-bottom-padding) - 1.5rem) * -1);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap);
+        --cols: 2;
+        --gap: 1rem;
+        --width-calc: calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+        @apply justify-center;
+
+        @media (max-width: 480px) {
+            --cols: 1;
+        }
+
+        .ppv-heroine-card-grid-item {
+            width: var(--width-calc);
+            cursor: pointer;
+
+            .ppv-heroine-card-grid-item-inner {
+                padding-bottom: 100%;
+                @apply bg-ppv-red border-2 border-ppv-red-30;
+
+                .ppv-heroine-card-item-image-blind {
+
+                    &.ppv-heroine-card-item-image-blind-gradient {
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.5) 100%);
+                    }
+                }
+            }
+        }
+
+        &[data-cards="odd"] {
+            .ppv-heroine-card-grid-item:last-child {
+                width: 100%;
+
+                & .ppv-heroine-card-grid-item-inner {
+                    padding-bottom: var(--width-calc);
+                }
+            }
+        }
+    }
+}

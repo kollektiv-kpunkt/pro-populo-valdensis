@@ -1,0 +1,45 @@
+.ppv-content-toggle {
+    width: 100%;
+    border: 2px solid var(--ppv-red-120);
+    border-radius: 2px;
+    padding: 1rem;
+    background-color: var(--ppv-red);
+    transition: 0.25s ease background-color;
+
+    summary {
+        .ppv-content-toggle-title {
+            max-width: 80%;
+            line-height: 1.35;
+        }
+
+        list-style: none;
+        cursor: pointer;
+        color: white;
+        font-weight: 600;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .ppv-content-toggle-icon {
+        height: fit-content;
+        transition: 0.25s ease transform;
+    }
+
+    &[open] {
+        background-color: white;
+
+        .ppv-content-toggle-summary {
+            color: var(--ppv-red);
+        }
+
+        .ppv-content-toggle-icon {
+            transform: rotate(-180deg);
+        }
+
+        .ppv-content-toggle-content {
+            color: black
+        }
+    }
+}

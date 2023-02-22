@@ -1,0 +1,19 @@
+{
+    "name": "ppv/content-toggle",
+    "title": "Content toggle",
+    "description": "Toggle to display and hide content on the page",
+    "category": "layout",
+    "icon": "editor-contract",
+    "keywords": [
+        "toggle",
+        "content",
+        "show",
+        "hide",
+        "ppv"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "layout.php"
+    },
+    "align": "full"
+}

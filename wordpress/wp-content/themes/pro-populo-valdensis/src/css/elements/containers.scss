@@ -1,0 +1,35 @@
+.ppv-container {
+    --container-padding: 2rem;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 480px) {
+        --container-padding: 1rem;
+    }
+
+    &__small {
+        max-width: calc(876px + var(--container-padding) * 2);
+    }
+
+    &__medium {
+        max-width: calc(1380px + var(--container-padding) * 2);
+    }
+
+    &__full {
+        max-width: calc(1920px + var(--container-padding) * 2);
+    }
+}
+
+.single {
+    .ppv-container {
+        &__small {
+            max-width: calc(680px + var(--container-padding) * 2);
+        }
+
+        &__medium {
+            max-width: calc(1080px + var(--container-padding) * 2);
+        }
+    }
+}

@@ -1,0 +1,144 @@
+.ppv-navbar-outer {
+    z-index: 1000;
+    transition: 0.25s ease background-color, 0.25s ease transform;
+
+    .ppv-app-navmenu {
+        display: flex;
+        height: fit-content;
+
+        button:focus {
+            outline-color: transparent;
+        }
+
+        .ppv-tofuburger {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.2rem;
+
+            div {
+                background-color: white;
+                height: 0.2rem;
+                width: 2rem;
+                transition: 0.25s ease width, 0.25s ease opacity, 0.25s ease transform;
+
+                &:nth-child(2) {
+                    width: 1.6rem;
+                }
+
+                &:nth-child(3) {
+                    width: 1.2rem;
+                }
+            }
+
+            &.is-transition {
+                div {
+                    width: 2rem !important;
+                }
+            }
+
+            &.is-active {
+                div {
+
+                    &:nth-child(1) {
+                        transform-origin: center center;
+                        transform: rotate(45deg) translate(0.3rem, 0.3rem);
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    &:nth-child(3) {
+                        transform-origin: center center;
+                        transform: rotate(-45deg) translate(0.3rem, -0.3rem);
+                    }
+                }
+            }
+        }
+    }
+
+    &.is-scrollbar {
+        transform: translateY(-100%);
+    }
+
+    &.is-scrolled {
+        background-color: var(--ppv-red)
+    }
+}
+
+.ppv-app-navmenu {
+    .ppv-app-navmenu-items {
+        clip-path: inset(0 0 0 100%);
+        visibility: hidden;
+        transition: clip-path 0.25s ease, visibility 0.25s ease;
+
+        &.is-active {
+            visibility: visible;
+            clip-path: inset(0 0 0 0);
+        }
+
+        .ppv-app-navmenu-items-container {
+
+            .current-menu-item a {
+                text-decoration: underline dashed;
+            }
+
+            a {
+                text-decoration: none;
+                transition: 0.25 ease text-decoration;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        @media (max-width: 980px) {
+            clip-path: inset(0 0 100% 0);
+            position: absolute;
+            top: calc(100% + 2px);
+            right: var(--container-padding);
+            white-space: nowrap;
+
+            &.is-active {
+                visibility: visible;
+                clip-path: inset(0 0 0 0);
+            }
+
+            .ppv-app-navmenu-items-container {
+                margin-right: 0;
+
+                .ppv-app-navmenu-items-list {
+                    flex-direction: column;
+                    align-items: flex-end;
+                    font-size: 1.75rem;
+                    font-weight: 900;
+                    text-align: end;
+
+                    .menu-item {
+                        padding: 0.25em 0.5em;
+                        border-bottom: 2px solid var(--ppv-red);
+                        width: fit-content;
+                        background-color: white;
+                        color: var(--ppv-red)
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    .ppv-open-nav-overlay {
+
+        &.is-active {
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+    }
+}
+
+.admin-bar .ppv-navbar-outer {
+    top: 32px;
+}

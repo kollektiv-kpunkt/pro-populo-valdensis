@@ -1,0 +1,105 @@
+.ppv-article-list-wrapper {
+    max-width: 1080px !important;
+
+    .ppv-article-list-searchbar-wrapper {
+        transition: 0.5s ease max-height;
+
+        .choices__list--dropdown .choices__item--selectable,
+        .choices__list[aria-expanded] .choices__item--selectable {
+            padding-right: 10px;
+        }
+
+        input[type="text"] {
+            border: none;
+            border-bottom: 4px solid var(--ppv-red);
+            border-radius: 0;
+            flex: 5;
+            width: 100%;
+            flex-basis: 100%;
+            @apply py-1 px-3 bg-slate-400 bg-opacity-10;
+            height: fit-content;
+        }
+
+        div.ppv-select-wrapper {
+            flex: 2;
+            width: 100%;
+            flex-basis: 100%;
+
+            @media (min-width: 640px) {
+                flex-basis: 0;
+            }
+
+            .choices__list--multiple .choices__item {
+                background-color: var(--ppv-red);
+                border-color: var(--ppv-red-150);
+                border-radius: 4px;
+            }
+        }
+
+        button[type="submit"] {
+            flex: 1;
+            width: 100%;
+            height: fit-content;
+
+            @media (max-width: 1080px) {
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+
+.ppv-article-list {
+
+    .ppv-article-list-item {
+        .ppv-article-list-item-content {
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+        }
+
+        .ppv-article-list-item-image-mobile {
+            >div {
+                padding-bottom: calc(100% / 16 * 9);
+            }
+        }
+
+        .ppv-article-list-item-image {
+            >div {
+                padding-bottom: calc(100% / 4 * 3);
+            }
+        }
+    }
+}
+
+#main-content .ppv-article-list-pagination {
+
+    ul {
+        padding-left: 0 !important;
+        list-style: none;
+        width: 100%;
+        display: flex;
+        column-gap: 0.25rem;
+        justify-content: end;
+
+        li {
+            margin: 0;
+            padding: 0;
+
+            >span,
+            >a {
+                color: white;
+                line-height: 1;
+                padding: 0.5rem 0.7rem;
+                background-color: var(--ppv-red);
+
+                &.current {
+                    background-color: var(--ppv-red-150);
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}

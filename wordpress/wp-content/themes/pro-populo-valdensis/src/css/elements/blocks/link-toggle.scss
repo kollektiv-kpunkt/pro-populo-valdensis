@@ -1,0 +1,37 @@
+.ppv-link-toggle-wrapper {
+    margin-top: 1.5rem;
+
+    &+& {
+        margin-top: -2px;
+    }
+
+    .ppv-link-toggle-content {
+        border-top: 2px solid #000000;
+        border-bottom: 2px solid #000000;
+
+        .ppv-link-toggle-content a p {
+            max-width: 80%;
+        }
+
+        &.text-white {
+            .ppv-block-content {
+                border-color: #ffffff;
+            }
+        }
+
+        i {
+            transition: 0.125s ease-in-out transform;
+        }
+
+        &:hover i {
+
+            &.icofont-download {
+                transform: scale(1.1);
+            }
+
+            &.icofont-rounded-right {
+                transform: translateX(0.5rem);
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+#main-content {
+    .ppv-button {
+        padding: 0.5em 0.5em;
+        border: 0.2em var(--bordercolor) solid;
+        display: inline-block;
+        background-color: var(--backgroundcolor);
+        color: var(--textcolor);
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 0.8;
+        text-decoration: none;
+        font-weight: bold;
+
+        --bordercolor: var(--ppv-red);
+        --backgroundcolor: var(--ppv-red);
+        --textcolor: var(--ppv-red-10);
+
+        transition: 0.125s ease filter, 0.125s ease opacity;
+
+        &.ppv-button-neg {
+            --bordercolor: var(--ppv-red-10);
+            --backgroundcolor: var(--ppv-red-10);
+            --textcolor: var(--ppv-red);
+        }
+
+        &.ppv-button-line {
+            --backgroundcolor: transparent;
+            --textcolor: var(--bordercolor);
+        }
+
+        &.ppv-button-line-fill {
+            --bordercolor: var(--textcolor);
+        }
+
+        a {
+            background-image: none;
+
+            &:hover {
+                color: var(--textcolor);
+            }
+        }
+    }
+
+    .ppv-button:hover {
+        filter: brightness(1.05) opacity(0.8);
+    }
+}
+
+#main-content .wp-block-button {
+    a {
+        text-decoration: none;
+    }
+}

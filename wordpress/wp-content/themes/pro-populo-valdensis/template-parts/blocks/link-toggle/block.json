@@ -1,0 +1,17 @@
+{
+    "name": "ppv/link-toggle",
+    "title": "Link Toggle",
+    "description": "Link Toggle for beautiful links",
+    "category": "layout",
+    "icon": "dashicons-admin-links",
+    "keywords": [
+        "link",
+        "toggle",
+        "ppv"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "layout.php"
+    },
+    "align": "full"
+}
