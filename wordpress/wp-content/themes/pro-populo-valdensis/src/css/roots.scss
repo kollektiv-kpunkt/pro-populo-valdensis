@@ -87,7 +87,7 @@ img:not(.ppv-no-filter) {
     }
 }
 
-#main-content>*.alignwide {
+#main-content *.alignwide {
     max-width: calc(1380px + var(--container-padding) * 2);
     --container-padding: 2rem;
     padding-left: var(--container-padding);
